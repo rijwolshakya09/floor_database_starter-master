@@ -7,9 +7,9 @@ abstract class StudentDAO {
   Future<void> insertData(Student student);
 
   @Query('select * from student')
-  Future<List<Student>> getAllStudents();
+  Future<List<Student?>> getAllStudents();
 
   @Query(
       'select * from student where username = :username and password = :password')
-  Future<Student> login(String username, String password);
+  Future<Student?> login(String username, String password);
 }

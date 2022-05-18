@@ -8,5 +8,5 @@ abstract class SubjectDAO {
   Future<void> insertSubject(Subject subject);
 
   @Query('select * from subject')
-  Future<List<Subject>> getAllSubjects();
+  Future<List<Subject?>> getAllSubjects();
 }
